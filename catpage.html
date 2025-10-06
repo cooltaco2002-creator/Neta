@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+    <!-- Language declaration -->
+<html lang="en">
+<head>
+     <!-- The way it reads characters -->
+ <meta charset="UTF-8">
+    <!-- For mobile devices screen -->
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Author of the page -->
+ <meta name="author" content="Eric Lawrence">
+    <!-- Browser Name -->
+ <title> Fun Website - NETA </title>
+   <link rel="stylesheet" href="Styles.css">
+   <nav>
+        <!-- Navigation links -->
+        <a href="index.html">Index</a>
+        <a href="catpage.html">CatPage</a>
+        <a href="FAQ.html">FAQ</a>
+    </nav>
+    <style>
+            /* Small local styles to make the cat images uniform and neat */
+            .cat-grid{
+                display:flex;
+                gap:1rem;
+                flex-wrap:wrap;
+                align-items:stretch;
+                justify-content:center;
+                margin:1rem 0;
+            }
+            .page-title{
+                text-align:center;
+                margin:0.5rem 0 0.75rem;
+                font-size:1.75rem;
+                color: #0c1939;
+            }
+            .cat-grid img{
+                width:320px;
+                height:220px;
+                object-fit:cover;
+                border-radius:8px;
+                box-shadow: 0 8px 20px rgba(2,6,23,0.08);
+                border: 1px solid rgba(0,0,0,0.06);
+                display:block;
+            }
+            .cat-item{ display:flex; flex-direction:column; align-items:center; }
+            .cat-item figcaption{ margin-top:0.45rem; font-size:0.95rem; color:#6b7280; text-align:center; }
+            @media (max-width:640px){
+                .cat-grid img{ width:100%; height:200px; max-width:420px; }
+            }
+        </style>
+</head>
+<body>
+        <!-- Picture of my cats -->
+    <h1 class="page-title">My Cats</h1>
+        <hr>
+          
+        <div class="cat-grid">
+            <figure class="cat-item">
+                <img src="images/20250407_142836.jpg" alt="Both Cats" />
+                <figcaption>Both cats</figcaption>
+            </figure>
+            <figure class="cat-item">
+                <img src="images/20241212_000307.jpg" alt="My Cat Stella" />
+                <figcaption>My Cat Stella</figcaption>
+            </figure>
+            <figure class="cat-item">
+                <img src="images/20230623_201740.jpg" alt="My Cat Daisy" />
+                <figcaption>My Cat Daisy</figcaption>
+            </figure>
+        </div>
+</body>
+</html>
+    <!-- Footer content -->
+    <footer>
+        <hr>
+        <p>© 2025 Eric Lawrence</p>
+    </footer>
