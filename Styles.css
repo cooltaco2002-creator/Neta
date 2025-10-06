@@ -1,0 +1,129 @@
+/* CSS for a clean, modern, and responsive website */
+:root{
+	--bg: #fbfdff;
+	--surface: #ffffff;
+	--accent: #0c25a5; /* deep blue used in the original inline color */
+	--muted: #6b7280;
+	--accent-2: #1f6feb;
+	--border: #e6e9ef;
+	--radius: 8px;
+}
+
+/* Page layout */
+html,body{
+	height:100%;
+}
+body{
+	margin:0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	background: var(--bg);
+	color: #111827;
+	line-height:1.5;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+}
+
+.site {
+	max-width: 980px;
+	margin: 2rem auto;
+	padding: 1.25rem;
+	background: var(--surface);
+	border-radius: var(--radius);
+	box-shadow: 0 6px 18px rgba(15,23,42,0.06);
+	border: 1px solid var(--border);
+}
+
+/* Headings */
+h1{
+	margin: 0 0 0.5rem;
+	font-size: 2rem;
+	color: var(--accent);
+}
+h2{ margin-top:1.25rem; color:#0f172a; }
+h3, h4{ color: #111827; margin:0.25rem 0; }
+
+/* Horizontal rule */
+hr{ border: none; border-top: 1px solid var(--border); margin: 1rem 0; }
+
+/* Lists and paragraphs */
+ul{ padding-left: 1.25rem; }
+li{ margin: 0.35rem 0; }
+p{ margin: 0.5rem 0; }
+
+/* Links */
+a{ color: var(--accent-2); text-decoration: none; }
+a:hover{ text-decoration: underline; }
+
+/* Table styling (modern, accessible) */
+table{
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 0.5rem;
+	box-shadow: 0 1px 0 rgba(2,6,23,0.04) inset;
+}
+th, td{
+	padding: 0.6rem 0.75rem;
+	text-align: left;
+	border-bottom: 1px solid var(--border);
+}
+th{
+	background: linear-gradient(180deg,#fbfdff,#f6f8ff);
+	color: var(--accent);
+	font-weight:600;
+}
+tr:nth-child(even) td{ background: #fbfdff; }
+
+/* Emphasis and small styles */
+mark{ background: #fffbeb; padding: 0 0.15rem; border-radius:3px; }
+span[style*="rgb(12, 37, 165)"] i{ font-style: italic; }
+
+/* Footer */
+footer{
+	margin-top:1.5rem;
+	font-size: 0.9rem;
+	color: var(--muted);
+	text-align: center;
+}
+
+/* Make the page responsive */
+@media (max-width: 760px){
+	.site{ margin: 1rem; padding: 1rem; }
+	h1{ font-size:1.5rem; }
+	th, td{ padding: 0.5rem; }
+}
+
+/* Utility: visually separate the top content */
+.lead{ margin-bottom: 0.75rem; color:var(--muted); }
+
+/* Accessibility helper for tables on small screens */
+@media (max-width:520px){
+	table{ display:block; overflow:auto; -webkit-overflow-scrolling:touch; }
+}
+
+/* Site navigation (shared) */
+nav{
+	display:flex;
+	gap:0.75rem;
+	align-items:center;
+	padding:0.5rem 0;
+}
+nav a{
+	color: var(--accent);
+	background: transparent;
+	padding:0.4rem 0.6rem;
+	border-radius:6px;
+	font-weight:600;
+}
+nav a:hover{
+	background: rgba(12,37,165,0.06);
+	color: var(--accent-2);
+}
+nav a[aria-current="page"], nav a.active{
+	background: linear-gradient(180deg, rgba(31,111,235,0.08), rgba(12,37,165,0.06));
+	color: var(--accent-2);
+}
+
+@media (max-width:520px){
+	nav{ flex-wrap:wrap; gap:0.5rem; }
+	nav a{ padding:0.45rem 0.5rem; }
+}
